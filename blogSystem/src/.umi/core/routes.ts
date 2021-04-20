@@ -10,6 +10,16 @@ export function getRoutes() {
     "path": "/",
     "component": require('@/pages/index').default,
     "exact": true
+  },
+  {
+    "path": "/home",
+    "component": require('@/pages/home/index').default,
+    "exact": true
+  },
+  {
+    "path": "/myhome",
+    "component": require('@/pages/myHome/index').default,
+    "exact": true
   }
 ];
 

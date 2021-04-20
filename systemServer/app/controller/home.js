@@ -4,8 +4,13 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
     async index() {
-        const { ctx } = this;
-        ctx.body = 'hi, egg124';
+        const { ctx, app } = this;
+        // const userId = ctx.params.id;
+        const user = await ctx.service.user.find(18879942330);
+        console.log('user', user.user, user.user.username);
+        // ctx.body = `hi, egg12f${user.user.username}`;
+        ctx.body = user.user;
+
     }
 }
 
