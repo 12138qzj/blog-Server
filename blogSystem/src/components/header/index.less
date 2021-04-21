@@ -1,8 +1,37 @@
 
 .header{
+  position: static;
   display: flex;
+  justify-content: space-between;
   background-color:white;
-  .title {
-    background: rgb(121, 242, 157);
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+  .logo{
+    cursor: pointer;
+    // position: absolute;
+    >img{
+      height: 60px;
+      width: 100px;
+    }
+  }
+  .headerTab{
+    // position: absolute;
+    width: calc(100% - 400px);
+    .MyMenuItem{
+      font-weight: 700;
+      font-size: 14px;
+      padding: 0 14px;
+    }
+    
+  }
+
+  .haederRight {
+    width: 400px;
+    display: flex;
+    .headerSearch{
+      line-height: 64px;
+      margin-right: 10px;
+    }
   }
 }
