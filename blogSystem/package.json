@@ -22,7 +22,8 @@
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
     "@umijs/preset-react": "1.x",
-    "umi": "^3.4.8"
+    "umi": "^3.4.8",
+    "wangeditor": "^4.6.15"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",

@@ -19,7 +19,6 @@ export default function IndexPage( props: any ) {
   }
 
   const renderHeaderMenu = () =>{
-    history.push('/home');
     const Itmes = (
       <>
         <MenuItem className={styles.MyMenuItem} key='home'>

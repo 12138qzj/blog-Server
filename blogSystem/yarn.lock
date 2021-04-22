@@ -354,6 +354,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.12.13"
 
+"@babel/runtime-corejs3@^7.11.2":
+  version "7.13.17"
+  resolved "https://registry.nlark.com/@babel/runtime-corejs3/download/@babel/runtime-corejs3-7.13.17.tgz?cache=0&sync_timestamp=1618961389737&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime-corejs3%2Fdownload%2F%40babel%2Fruntime-corejs3-7.13.17.tgz#9baf45f03d4d013f021760b992d6349a9d27deaf"
+  integrity sha1-m69F8D1NAT8CF2C5ktY0mp0n3q8=
+  dependencies:
+    core-js-pure "^3.0.0"
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@7.12.5":
   version "7.12.5"
   resolved "https://registry.npm.taobao.org/@babel/runtime/download/@babel/runtime-7.12.5.tgz?cache=0&sync_timestamp=1615243066705&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
@@ -2242,6 +2250,11 @@ copy-to-clipboard@^3.2.0:
   integrity sha1-EVqhqZmP+rYZb5MHatbaO5E2Yq4=
   dependencies:
     toggle-selection "^1.0.6"
+
+core-js-pure@^3.0.0:
+  version "3.10.2"
+  resolved "https://registry.nlark.com/core-js-pure/download/core-js-pure-3.10.2.tgz?cache=0&sync_timestamp=1618851891299&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcore-js-pure%2Fdownload%2Fcore-js-pure-3.10.2.tgz#065304f8547bf42008d4528dfff973c38bd6a332"
+  integrity sha1-BlME+FR79CAI1FKN//lzw4vWozI=
 
 core-js@3.6.5:
   version "3.6.5"
@@ -7591,6 +7604,11 @@ tslib@^1.9.0:
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.14.1.tgz?cache=0&sync_timestamp=1617647074515&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
 
+tslib@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.2.0.tgz?cache=0&sync_timestamp=1618846758811&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
+  integrity sha1-+yxHWXfjXiQTEe3iaTzuHsZpj1w=
+
 tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.npm.taobao.org/tty-browserify/download/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
@@ -7876,6 +7894,15 @@ walker@^1.0.7, walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
+
+wangeditor@^4.6.15:
+  version "4.6.15"
+  resolved "https://registry.npm.taobao.org/wangeditor/download/wangeditor-4.6.15.tgz?cache=0&sync_timestamp=1618509132701&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwangeditor%2Fdownload%2Fwangeditor-4.6.15.tgz#960338f8819d02fe9f0267a850c404bdcd17d6d9"
+  integrity sha1-lgM4+IGdAv6fAmeoUMQEvc0X1tk=
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@babel/runtime-corejs3" "^7.11.2"
+    tslib "^2.1.0"
 
 warning@^3.0.0:
   version "3.0.0"
