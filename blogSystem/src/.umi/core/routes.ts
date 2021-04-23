@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { ApplyPluginsType } from 'E:/bs_blog/blogSystem/node_modules/umi/node_modules/@umijs/runtime';
+import { ApplyPluginsType } from '/Users/shaoyi/Desktop/毕业设计/Design/blog-server/blogSystem/node_modules/@umijs/runtime';
 import * as umiExports from './umiExports';
 import { plugin } from './plugin';
 
@@ -19,6 +19,16 @@ export function getRoutes() {
   {
     "path": "/myhome",
     "component": require('@/pages/myHome/index').default,
+    "exact": true
+  },
+  {
+    "path": "/detail/:id",
+    "component": require('@/pages/detail/index').default,
+    "exact": true
+  },
+  {
+    "path": "/edit/:id",
+    "component": require('@/pages/edit/index').default,
     "exact": true
   }
 ];

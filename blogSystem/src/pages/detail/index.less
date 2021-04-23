@@ -1,3 +1,54 @@
-.acticle-container{
+.article-container{
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
     margin-top: 10px;
+    .article-header{
+        display: flex;
+        width: 800px;
+        justify-content: space-between;
+        .article-user{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            >img{
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+            }
+
+            .article-info{
+                margin-left: 10px;
+                .user-name{
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: #2e3135;
+                }
+
+                .article-time{
+                    align-items: center;
+                    margin: .3rem 0 0;
+                    font-size: 13px;
+                    color: #8a9aa9;
+                    cursor: default;
+                }
+            }
+            
+        }
+
+        .article-operation{
+
+        }
+        
+    }
+    .article-content{
+        width: 800px;
+    }
+    .author-info{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
 }

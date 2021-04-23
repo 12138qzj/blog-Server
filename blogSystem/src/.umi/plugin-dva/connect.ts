@@ -6,7 +6,7 @@ import { EffectsCommandMap, SubscriptionAPI } from 'dva';
 import { match } from 'react-router-dom';
 import { Location, LocationState, History } from 'history';
 
-export * from 'E:/bs_blog/blogSystem/src/models/global';
+export * from '/Users/shaoyi/Desktop/毕业设计/Design/blog-server/blogSystem/src/models/global';
 
 export interface Action<T = any> {
   type: T

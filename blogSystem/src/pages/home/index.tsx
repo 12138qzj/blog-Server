@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import E from "wangeditor";
 import Header from '@/components/header';
 import Card from '@/components/card';
 import ContentTitle from '@/components/contentTitle';
@@ -69,15 +68,7 @@ const data = [
             </TabPane>
   </Tabs> */}
 
-  useEffect(() => {
-    if(!window.editor){
-      const editor = new E(document.getElementById('div1'));
-      window.editor = editor;
-      window.editor.create();
-      // window.editor.txt.html('<h2 id="tp87k">发大赛会发给谁</h2><p>发股热播v<b></b></p><p><b>发生大黄蜂&nbsp;</b><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;"></span></p>')
-    }
-   
-  }, [])
+
 
   return (
     <>
@@ -90,6 +81,7 @@ const data = [
               onClick={() =>{
                 setIsHot(false)
               }}
+              key="hot"
             >
               热门
             </li>
@@ -98,6 +90,7 @@ const data = [
              onClick={() =>{
                setIsHot(true)
              }}
+             key="new"
             >
               最新
             </li>
@@ -105,21 +98,11 @@ const data = [
         } />
       {
         data.map((item: any)=>{
-          return (
-            <>
-              <Card key={item.id} {...item} />
-            </>
-          )
+          return <Card key={item.id} {...item} />
         })
       }
       </div>
-      <div id='div1'></div>
-      <button onClick={() =>{
-        const text = window.editor.txt.html()
-        console.log('editor', text);
-      }}>
-        提交
-      </button>
+      
     </>
   );
 }

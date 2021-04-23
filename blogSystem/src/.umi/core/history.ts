@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { createBrowserHistory, History } from 'E:/bs_blog/blogSystem/node_modules/umi/node_modules/@umijs/runtime';
+import { createBrowserHistory, History } from '/Users/shaoyi/Desktop/毕业设计/Design/blog-server/blogSystem/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"

@@ -4,6 +4,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+
   theme: {
     "@primary-color": "#f68746", //主题色
     "@link-color": "#1890ff", // 链接色
@@ -19,10 +20,15 @@ export default defineConfig({
     "@border-color-base": "#d9d9d9", // 边框色
     "@box-shadow-base": "0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05)", // 浮层阴影
   },
+  
   routes: [
     { path: '/', component: '@/pages/index' },
     { path: '/home', component: '@/pages/home/index' },
     { path: '/myhome', component: '@/pages/myHome/index' },
+    { path: '/detail/:id', component: '@/pages/detail/index' },
+    { path: '/edit/:id', component: '@/pages/edit/index' },
+
+
   ],
   fastRefresh: {},
 });
