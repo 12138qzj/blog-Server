@@ -6,7 +6,7 @@ export default defineConfig({
   },
 
   theme: {
-    "@primary-color": "#f68746", //主题色
+    "@primary-color": "#1890ff", //主题色
     "@link-color": "#1890ff", // 链接色
     "@success-color": "#52c41a", // 成功色
     "@warning-color": "#faad14", // 警告色
@@ -21,14 +21,34 @@ export default defineConfig({
     "@box-shadow-base": "0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05)", // 浮层阴影
   },
   
+  // routes: [
+  //   { path: '/', component: '@/pages/index' },
+  //   { path: '/login', component: '@/pages/login/index' },
+  //   { path: '/home', component: '@/pages/home/index' },
+  //   { path: '/myhome', component: '@/pages/myHome/index' },
+  //   { path: '/detail/:id', component: '@/pages/detail/index' },
+  //   { path: '/edit/:id', component: '@/pages/edit/index' },
+  // ],
   routes: [
-    { path: '/', component: '@/pages/index' },
-    { path: '/home', component: '@/pages/home/index' },
-    { path: '/myhome', component: '@/pages/myHome/index' },
-    { path: '/detail/:id', component: '@/pages/detail/index' },
-    { path: '/edit/:id', component: '@/pages/edit/index' },
-
-
+    { path: '/login', component: 'public' },
+    {
+      path: '/',
+      component: '@/layouts/index',
+      routes: [
+        { path: '/home', component: '@/pages/home/index' },
+        { path: '/myhome', component: '@/pages/myHome/index' },
+        { path: '/detail/:id', component: '@/pages/detail/index' },
+        { path: '/edit/:id', component: '@/pages/edit/index' },
+        { path: '/*', component: '@/pages/404/index' },
+      ],
+    }, 
   ],
   fastRefresh: {},
+  proxy:{
+    '/blogServer': {
+      target: 'http://127.0.0.1:7001/',
+      // target: 'http://localhost:8068/',
+      changeOrigin: true,
+    },
+  },
 });

@@ -1,7 +1,14 @@
 
 import { useEffect } from 'react'
 import { connect } from 'umi'
-import styles from './index.less';
+import { Layout } from 'antd'
+import AdminSideBar from '@/components/sidebar'
+import Breadcrumb from '@/components/Breadcrumb'
+
+
+const { Sider, Header, Content, Footer } = Layout
+
+import './index.less';
 
 
 const MyHome = (props: any) => {
@@ -19,9 +26,18 @@ const MyHome = (props: any) => {
   
   console.log('hometest', hometest, props);
   return (
-    <div>
-      <h1 className={styles.title}>Page indexmyhome</h1>
-    </div>
+    <Layout>
+      <Sider width={200} className='admin-sider' >
+        <AdminSideBar selectedKeys={[location.pathname]} />
+      </Sider>
+      <Layout className='admin-content-wrap'>
+        <Breadcrumb />
+        <Content className='admin-content'>
+          {props.children}
+        </Content>
+      </Layout>
+
+    </Layout>
   );
 
 }

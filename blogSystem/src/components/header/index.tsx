@@ -1,6 +1,13 @@
-import { history } from 'umi'
+import { useEffect } from 'react';
+import { history } from 'umi';
+import _ from 'lodash';
 import { Layout, Button, Tooltip, Menu } from 'antd';
+import { cookie } from '@/utils/common'
 import Search from '@/components/search'
+import { request } from '@/utils/axios'
+import { SaveIsLogin, GetIsLogin } from '@/utils/storage'
+import UserInfo from './right'
+
 import logo from '@/assets/logo.jpg';
 
 import styles from './index.less';
@@ -16,6 +23,11 @@ export default function IndexPage( props: any ) {
   // 回到首页
   const goToIndex = () =>{
     history.push('/home');
+  }
+
+  const { userInfo = {}} = GetIsLogin() || ''
+  if(_.isEmpty(userInfo)){
+    history.push('/login')
   }
 
   const renderHeaderMenu = () =>{
@@ -48,6 +60,11 @@ export default function IndexPage( props: any ) {
     )
   }
 
+  useEffect(()=>{
+
+    console.log('请求进入')
+  }, [])
+
   return (
     <GlobalHeader
       className={styles.header}
@@ -63,10 +80,7 @@ export default function IndexPage( props: any ) {
       </div>
       <div className={styles.haederRight}>
         { renderHeaderExtra() }
-
-        <div>
-          登陆
-        </div>
+        <UserInfo userInfo={userInfo} />
       </div>
     </GlobalHeader>
   );

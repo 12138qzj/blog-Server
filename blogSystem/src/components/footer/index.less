@@ -1,3 +1,96 @@
-.title {
-  background: rgb(121, 242, 157);
+#footer {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  background: rgba(217, 219, 228, 0);
+  justify-content: center;
+  align-items: center;
+  line-height: 18px;
+  font-size: 12px;
+  transition: all 2s;
+
+  .footer-img {
+    margin: 0 49px;
+    position: relative;
+
+    &-weChart {
+      width: 38px;
+      height: 38px;
+      background: url("../../assets//weChart.svg") no-repeat center;
+      background-size: 38px;
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
+
+    &-title {
+      font-size: 10px;
+      color: #ADACAC;
+    }
+
+    &-qrcode {
+      background: #ffffff url("https://passport.ctrip.com/ssoproxy/QRCode/getQRCodeImg?expired=1620483143977") no-repeat center;
+      background-size: 74px;
+      border-radius: 2px;
+      opacity: 0;
+      position: absolute;
+      bottom: -5px;
+      left: -8px;
+      width: 80px;
+      height: 80px;
+      transition: all .3s ease-in;
+    }
+
+    &:hover>.footer-img-qrcode {
+      opacity: 1;
+    }
+
+    &:hover {
+      cursor: none;
+    }
+  }
+
+  .footer-left {
+    text-align: right;
+
+    &-title {
+
+      span {
+        color: #DFDFDF;
+        font-weight: 500;
+      }
+    }
+
+    &-content {
+      &-link {
+        color: #ADACAC;
+        ;
+        display: inline-block;
+        line-height: 18px;
+
+        &:not(:last-child):after {
+          content: '';
+          display: inline-block;
+          height: 13px;
+          vertical-align: middle;
+          margin-left: 4px;
+          box-sizing: border-box;
+          background: #ADACAC;
+          ;
+          width: 1px;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  .footer-right {
+    &-content {
+      margin: 5px 0;
+    }
+  }
+
+  &.footer-fix {
+    position: fixed;
+    bottom: 0;
+  }
 }
